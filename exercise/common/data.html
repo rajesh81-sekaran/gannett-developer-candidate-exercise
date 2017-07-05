@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--<style>
+        div.cities {
+            color: black;
+            margin: 20px 0 20px 0;
+            padding: 20px;
+        }
+    </style>-->
+</head>
+
+<body text={{fontColor .Theme}}>
+{{$mycolor := fontColor .Theme}}
+    <h1>My Delicious Articles</h1>
+    <div>{{range .Articles}}
+        <h2>
+            <a href="{{.Href}}" style="text-decoration: none"><font color={{$mycolor}}>{{.Title}}</font></a>
+        </h2>
+        <p><dd><a href="{{.Href}}" style="text-decoration: none"><font color={{$mycolor}}>{{.Summary}}</font></a></dd></p>{{end}}</div>
+</body>
+
+</html>
